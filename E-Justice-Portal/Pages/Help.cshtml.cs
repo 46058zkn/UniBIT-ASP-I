@@ -3,18 +3,17 @@ using Microsoft.Extensions.Logging;
 
 namespace E_Justice_Portal.Pages
 {
-    public class IndexModel : PageModel
+    public class HelpModel : PageModel
     {
-        private readonly ILogger<IndexModel> _logger;
+        private readonly ILogger<HelpModel> _logger;
 
-        public IndexModel(ILogger<IndexModel> logger)
+        public HelpModel(ILogger<HelpModel> logger)
         {
             _logger = logger;
         }
 
         public void OnGet()
         {
-
         }
     }
 }

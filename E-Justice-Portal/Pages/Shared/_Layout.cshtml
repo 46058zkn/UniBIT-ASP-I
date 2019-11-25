@@ -1,51 +1,124 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - E-Justice Portal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>@ViewData["Title"]Единен портал за електронно правосъдие</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/style2.css" />
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">E-Justice Portal</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <partial name="_LoginPartial" />
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
+    <div class="loader"><div><img src="~/img/loader.gif" alt="" /><br />Моля, изчакайте</div></div>
+    <div class="wrapper">
+        <header class="clearfix">
+            <a class="logo" href="https://ecase.justice.bg/" title="">
+                <img src="~/img/gerb.jpg" alt="" />
+            </a>
+
+            <button type="button" role="button" class="lines-button x menu hidden-lg">
+                <span class="lines"></span>
+            </button><label>Меню</label>
+
+            <div class="title">
+                <strong>Единен портал за електронно правосъдие</strong>
+                <span>Република България</span>
             </div>
+
+            <div class="user" style="min-width: 150px; margin-bottom: 10px;">
+                <a class="" href="~/Content/Login.html">Вход</a>
+            </div>
+
+            <div class="clear"></div>
+
+            @*<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+                    <div class="container">
+                        <a class="navbar-brand" asp-area="" asp-page="/Index">E-Justice Portal</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                            <partial name="_LoginPartial" />
+                            <ul class="navbar-nav flex-grow-1">
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>*@
+        </header>
+        <nav class="main-menu clearfix">
+            @*<a href="~/" class=" active" title="Начало">Начало</a>*@
+            <a class="active" title="Начало" asp-area="" asp-page="/Index">Начало</a>
+            <a href="~/Content/Search.html" class="" title="Съдебни дела">Съдебни дела</a>
+            <a href="~/Content/CourtsList.html" class="" title="Списък съдилища">Списък съдилища</a>
+            <a href="~/Content/ElectronicCasesAccessRules.html" class="" title="Правила за достъп">Правила за достъп</a>
+            <a title="Галерия" asp-area="" asp-page="/Gallery">Галерия</a>
         </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
 
-    <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2019 - E_Justice_Portal - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
         </div>
-    </footer>
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+        <div class="information-links clearfix" style="margin-top:20px;">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                <a style="text-decoration:none;"><strong>Българско правосъдие</strong></a>
+                <a href="http://www.vss.justice.bg/" target="blank">Висш съдебен съвет на Република България</a>
+                <a href="https://portal.justice.bg/">Единен портал за електронно правосъдие</a>
+                <a href="http://www.nbpp.government.bg/" target="blank">Националното бюро за правна помощ</a>
+                <a href="http://www.mjs.bg/" target="blank">Министерство на правосъдието</a>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                <a style="text-decoration:none;"><strong>Международно правосъдие</strong></a>
+                <a href="http://www.echr.coe.int/Pages/home.aspx?p=home&amp;c=" target="blank">Европейски съд по правата на човека в Страсбург</a>
+                <a href="https://e-justice.europa.eu/home.do?action=home&amp;plang=bg" target="blank">Европейският портал за електронно правосъдие</a>
+                <a href="http://www.icj-cij.org/" target="blank">Международен съд към ООН в Хага</a>
+                <a href="http://www.hcch.net/upload/bulgarian.html" target="blank">Хагска конференция</a>
+            </div>
+            <div class="md-clear"> </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                <a style="text-decoration:none;"><strong>Европейско законодателство</strong></a>
+                <a href="http://ec.europa.eu/legislation/index_bg.htm" target="blank">Европейско законодателство</a>
+                <a href="http://ec.europa.eu/civiljustice/index_bg.htm" target="blank">Европейска съдебна мрежа</a>
+                <a href="http://curia.europa.eu/jcms/jcms/j_6/" target="blank">Съд на Европейския съюз</a>
+                <a href="http://eur-lex.europa.eu/homepage.html?locale=bg" target="blank">Право на ЕС</a>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                <a style="text-decoration:none;"><strong>Обща информация</strong></a>
+                <a href="~/Content/AccessibilityPolicy.html">Политика за достъпност</a>
+                <a href="~/Content/AboutTheSystem.html">За системата</a>
+                @*<a href="~/Content/Help.cshtml">Помощ</a>*@
+                <a class="nav-link" asp-area="" asp-page="/Help">Помощ</a>
+                @*<a asp-area="" asp-page="/Help">Начало</a>*@
+            </div>
+            <span class="gototop">
+                <img src="~/img/icons/chevron-up.png" alt="Горе">
+                Горе
+            </span>
+        </div>
 
-    @RenderSection("Scripts", required: false)
+        <footer class="clearfix text-align-center">
+            <div class="col-xs-12">
+                <p style="margin:20px 20% 20px 20%">Порталът е разработен по проект: „Електронно правосъдие - проучване и изграждане на единна комуникационна и информационна инфраструктура и единен електронен портал на съдебната власт“, финансиран по Оперативна програма "Административен капацитет", съфинансирана от Европейския съюз чрез Европейския социален фонд. Договорът е сключен в изпълнение на обществена поръчка с предмет: „Разработване и внедряване на единен портал на електронното правосъдие, и обучение за работа с единния портал“.</p>
+                <img src="~/img/footer-logos.gif" alt="" />
+            </div>
+        </footer>
+
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        @*<script src="~/js/custom.js"></script>
+            <script src="~/js/custom2.js"></script>*@
+        <script src="~/js/site.js" asp-append-version="true"></script>
+
+        @RenderSection("Scripts", required: false)
+    </div>
 </body>
 </html>
