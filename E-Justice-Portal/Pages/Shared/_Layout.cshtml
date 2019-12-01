@@ -30,8 +30,6 @@
                 <a class="" href="~/Content/Login.html">Вход</a>
             </div>
 
-            <div class="clear"></div>
-
             @*<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
                     <div class="container">
                         <a class="navbar-brand" asp-area="" asp-page="/Index">E-Justice Portal</a>
@@ -62,11 +60,15 @@
             <a title="Галерия" asp-area="" asp-page="/Gallery">Галерия</a>
         </nav>
 
-        <div class="container">
-            <main role="main" class="pb-3">
-                @RenderBody()
-            </main>
-        </div>
+        <main role="main">
+            @RenderBody()
+        </main>
+
+        @*<div class="container">
+                <main role="main" class="pb-3">
+                    @RenderBody()
+                </main>
+            </div>*@
 
         <div class="information-links clearfix" style="margin-top:20px;">
             <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
@@ -111,7 +113,7 @@
                 <img src="~/img/footer-logos.gif" alt="" />
             </div>
         </footer>
-
+        <div class="clear"></div>
         <script src="~/lib/jquery/dist/jquery.min.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
         @*<script src="~/js/custom.js"></script>
