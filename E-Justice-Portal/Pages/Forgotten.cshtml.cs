@@ -3,11 +3,11 @@ using Microsoft.Extensions.Logging;
 
 namespace E_Justice_Portal.Pages
 {
-    public class CourtsModel : PageModel
+    public class ForgottenModel : PageModel
     {
-        private readonly ILogger<CourtsModel> _logger;
+        private readonly ILogger<ForgottenModel> _logger;
 
-        public CourtsModel(ILogger<CourtsModel> logger)
+        public ForgottenModel(ILogger<ForgottenModel> logger)
         {
             _logger = logger;
         }

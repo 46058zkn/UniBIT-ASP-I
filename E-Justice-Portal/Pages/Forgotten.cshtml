@@ -1,0 +1,56 @@
+﻿@page
+@model E_Justice_Portal.Pages.ForgottenModel
+@{
+    ViewData["Title"] = "";
+}
+
+<div class="breadcrumbs"><a class="active" title="Начало" asp-page="/Index">Начало</a><span>&nbsp;&gt;&nbsp;</span>Забравена парола</div>
+
+<div class="login">
+    <div class="locker text-align-center">
+        <img src="~/img/icons/login-locker.png" alt="" />
+        <span class="title">Забравена парола</span>
+    </div>
+    <div class="login-form">
+        <span class="title">Забравена парола</span>
+        <form class="search-form" method="post">
+            <div class="rw">
+                <div class="lbl"></div>
+                <div class="vl">
+                    <div class="validation-summary-valid" data-valmsg-summary="true">
+                        <ul>
+                            <li style="display:none"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="rw">
+                <div class="lbl">Потребителско име:</div>
+                <div class="vl">
+                    <input data-val="true" data-val-length="Полето &quot;Потребителско име&quot; не може да съдържа повече от 100 символа." data-val-length-max="100" data-val-regex="Полето &quot;Потребителско име&quot;, съдържащо Вашия имейл адрес, е невалидно." data-val-regex-pattern="[a-zA-Z0-9!#$%&amp;&#39;*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&amp;&#39;*+/=?^_`{|}~-]+)*+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?" data-val-required="Полето &quot;Потребителско име&quot;, съдържащо Вашия имейл адрес, е задължително." id="Email" name="Email" type="text" value="" />
+                </div>
+            </div>
+            <div class="rw">
+                <div class="lbl">Код за сигурност:</div>
+                <div class="vl">
+                    <input type="hidden" name="captcha-guid" value="f76d39873a4a4141a314c3d17efef8ba" />
+                    <img src="~/img/captcha4.gif" alt="CAPTCHA" width="150" height="31" />
+                </div>
+            </div>
+            <div class="rw">
+                <div class="lbl"> </div>
+                <div class="vl">
+                    <div class="col-xs-6 no-padding">
+                        <input autocomplete="off" id="Captcha" maxlength="5" name="Captcha" type="text" value="" />
+                    </div>
+                </div>
+            </div>
+            <div class="rw">
+                <div class="lbl"></div>
+                <div class="vl">
+                    <input type="submit" class="search-submit" value="ПРОДЪЛЖИ">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
