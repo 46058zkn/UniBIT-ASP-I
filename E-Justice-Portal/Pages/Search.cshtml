@@ -1,0 +1,454 @@
+﻿@page
+@model E_Justice_Portal.Pages.SearchModel
+@{
+    ViewData["Title"] = "";
+}
+
+<div class="breadcrumbs"><a class="active" title="Начало" asp-page="/Index">Начало</a><span>&nbsp;&gt;&nbsp;</span>Съдебни дела</div>
+
+<div class="info-box-wrapper">
+    <div class="info-box" style="text-align: justify">
+        <p>В момента се намирате в публичната част на Единния портал за електронно правосъдие, в която се съдържа информация за съдебните дела на всички съдилища, свързани с Единния портал. Информацията в публичната част е със заличени лични данни и с ограничен обхват. За да видите в цялост електронните копия на Вашите съдебни дела, е необходимо да се влезете във Вашия потребителски профил като изберете „<a asp-page="/Login">Вход</a>” и въведете Вашите потребителско име и парола. За повече информация вижте разделите <a asp-page="/Rules">Правила за достъп</a> и <a asp-page="/Help">Помощ</a>.</p>
+    </div>
+</div>
+
+<div class="search-panel clearfix">
+    <div class="title">
+        <span>Търсене на</span>
+        <strong>съдебно</strong>
+        <strong>дело</strong>
+    </div>
+    <div class="search-form-wrapper">
+        <form class="search-form" method="post">
+
+            <input name="__RequestVerificationToken" type="hidden" value="_NQLXZGo4_oSam_n-Of4vz4jusRM71BzOgV9VZBzjGI0kKeF_pSPiusxMFCd0K5RBf8BzaoY99hX_d_lZHiO9vdQLBhjGVfbZj0YGP01miI1" />
+            <div class="rw">
+                <div class="lbl">Съд:</div>
+                <div class="vl">
+                    <div class="col-sm-10 no-padding" style="width: 87.5%;">
+                        <select class="select2" id="CourtCode" name="CourtCode">
+                            <option value="">Всички</option>
+                            <option value="703">Административен съд - Благоевград</option>
+                            <option value="704">Административен съд - Бургас</option>
+                            <option value="705">Административен съд - Варна</option>
+                            <option value="706">Административен съд - Велико Търново</option>
+                            <option value="707">Административен съд - Видин</option>
+                            <option value="708">Административен съд - Враца</option>
+                            <option value="709">Административен съд - Габрово</option>
+                            <option value="710">Административен съд - Добрич</option>
+                            <option value="712">Административен съд - Кърджали</option>
+                            <option value="711">Административен съд - Кюстендил</option>
+                            <option value="713">Административен съд - Ловеч</option>
+                            <option value="714">Административен съд - Монтана</option>
+                            <option value="715">Административен съд - Пазарджик</option>
+                            <option value="716">Административен съд - Перник</option>
+                            <option value="717">Административен съд - Плевен</option>
+                            <option value="718">Административен съд - Пловдив</option>
+                            <option value="719">Административен съд - Разград</option>
+                            <option value="720">Административен съд - Русе</option>
+                            <option value="721">Административен съд - Силистра</option>
+                            <option value="722">Административен съд - Сливен</option>
+                            <option value="723">Административен съд - Смолян</option>
+                            <option value="701">Административен съд - София-град</option>
+                            <option value="702">Административен съд - София-област</option>
+                            <option value="724">Административен съд - Стара Загора</option>
+                            <option value="725">Административен съд - Търговище</option>
+                            <option value="726">Административен съд - Хасково</option>
+                            <option value="727">Административен съд - Шумен</option>
+                            <option value="728">Административен съд - Ямбол</option>
+                            <option value="101">Апелативен специализиран наказателен съд</option>
+                            <option value="200">Апелативен съд - Бургас</option>
+                            <option value="300">Апелативен съд - Варна</option>
+                            <option value="400">Апелативен съд - Велико Търново</option>
+                            <option value="500">Апелативен съд - Пловдив</option>
+                            <option value="100">Апелативен съд - София</option>
+                            <option value="630">Военен съд - Варна</option>
+                            <option value="640">Военен съд - Плевен</option>
+                            <option value="620">Военен съд - Пловдив</option>
+                            <option value="650">Военен съд - Сливен</option>
+                            <option value="610">Военен съд - София</option>
+                            <option value="600">Военно-апелативен съд</option>
+                            <option value="001">Върховен административен съд</option>
+                            <option value="002">Върховен касационен съд</option>
+                            <option value="120">Окръжен съд - Благоевград</option>
+                            <option value="210">Окръжен съд - Бургас</option>
+                            <option value="310">Окръжен съд - Варна</option>
+                            <option value="410">Окръжен съд - Велико Търново</option>
+                            <option value="130">Окръжен съд - Видин</option>
+                            <option value="140">Окръжен съд - Враца</option>
+                            <option value="420">Окръжен съд - Габрово</option>
+                            <option value="320">Окръжен съд - Добрич</option>
+                            <option value="510">Окръжен съд - Кърджали</option>
+                            <option value="150">Окръжен съд - Кюстендил</option>
+                            <option value="430">Окръжен съд - Ловеч</option>
+                            <option value="160">Окръжен съд - Монтана</option>
+                            <option value="520">Окръжен съд - Пазарджик</option>
+                            <option value="170">Окръжен съд - Перник</option>
+                            <option value="440">Окръжен съд - Плевен</option>
+                            <option value="530">Окръжен съд - Пловдив</option>
+                            <option value="330">Окръжен съд - Разград</option>
+                            <option value="450">Окръжен съд - Русе</option>
+                            <option value="340">Окръжен съд - Силистра</option>
+                            <option value="220">Окръжен съд - Сливен</option>
+                            <option value="540">Окръжен съд - Смолян</option>
+                            <option value="550">Окръжен съд - Стара Загора</option>
+                            <option value="350">Окръжен съд - Търговище</option>
+                            <option value="560">Окръжен съд - Хасково</option>
+                            <option value="360">Окръжен съд - Шумен</option>
+                            <option value="230">Окръжен съд - Ямбол</option>
+                            <option value="211">Районен съд - Айтос</option>
+                            <option value="511">Районен съд - Ардино</option>
+                            <option value="531">Районен съд - Асеновград</option>
+                            <option value="321">Районен съд - Балчик</option>
+                            <option value="131">Районен съд - Белоградчик</option>
+                            <option value="161">Районен съд - Берковица</option>
+                            <option value="121">Районен съд - Благоевград</option>
+                            <option value="181">Районен съд - Ботевград</option>
+                            <option value="171">Районен съд - Брезник</option>
+                            <option value="212">Районен съд - Бургас</option>
+                            <option value="451">Районен съд - Бяла</option>
+                            <option value="141">Районен съд - Бяла Слатина</option>
+                            <option value="311">Районен съд - Варна</option>
+                            <option value="361">Районен съд - Велики Преслав</option>
+                            <option value="411">Районен съд - Велико Търново</option>
+                            <option value="521">Районен съд - Велинград</option>
+                            <option value="132">Районен съд - Видин</option>
+                            <option value="142">Районен съд - Враца</option>
+                            <option value="421">Районен съд - Габрово</option>
+                            <option value="322">Районен съд - Ген. Тошево</option>
+                            <option value="412">Районен съд - Горна Оряховица</option>
+                            <option value="122">Районен съд - Гоце Делчев</option>
+                            <option value="555">Районен съд - Гълъбово</option>
+                            <option value="541">Районен съд - Девин</option>
+                            <option value="312">Районен съд - Девня</option>
+                            <option value="561">Районен съд - Димитровград</option>
+                            <option value="323">Районен съд - Добрич</option>
+                            <option value="422">Районен съд - Дряново</option>
+                            <option value="341">Районен съд - Дулово</option>
+                            <option value="151">Районен съд - Дупница</option>
+                            <option value="413">Районен съд - Елена</option>
+                            <option value="182">Районен съд - Елин Пелин</option>
+                            <option value="231">Районен съд - Елхово</option>
+                            <option value="183">Районен съд - Етрополе</option>
+                            <option value="542">Районен съд - Златоград</option>
+                            <option value="565">Районен съд - Ивайловград</option>
+                            <option value="331">Районен съд - Исперих</option>
+                            <option value="184">Районен съд - Ихтиман</option>
+                            <option value="324">Районен съд - Каварна</option>
+                            <option value="551">Районен съд - Казанлък</option>
+                            <option value="532">Районен съд - Карлово</option>
+                            <option value="213">Районен съд - Карнобат</option>
+                            <option value="143">Районен съд - Кнежа</option>
+                            <option value="144">Районен съд - Козлодуй</option>
+                            <option value="185">Районен съд - Костинброд</option>
+                            <option value="221">Районен съд - Котел</option>
+                            <option value="513">Районен съд - Крумовград</option>
+                            <option value="332">Районен съд - Кубрат</option>
+                            <option value="133">Районен съд - Кула</option>
+                            <option value="514">Районен съд - Кърджали</option>
+                            <option value="152">Районен съд - Кюстендил</option>
+                            <option value="441">Районен съд - Левски</option>
+                            <option value="431">Районен съд - Ловеч</option>
+                            <option value="162">Районен съд - Лом</option>
+                            <option value="432">Районен съд - Луковит</option>
+                            <option value="543">Районен съд - Мадан</option>
+                            <option value="214">Районен съд - Малко Търново</option>
+                            <option value="145">Районен съд - Мездра</option>
+                            <option value="515">Районен съд - Момчилград</option>
+                            <option value="163">Районен съд - Монтана</option>
+                            <option value="215">Районен съд - Несебър</option>
+                            <option value="442">Районен съд - Никопол</option>
+                            <option value="222">Районен съд - Нова Загора</option>
+                            <option value="362">Районен съд - Нови пазар</option>
+                            <option value="351">Районен съд - Омуртаг</option>
+                            <option value="146">Районен съд - Оряхово</option>
+                            <option value="414">Районен съд - Павликени</option>
+                            <option value="522">Районен съд - Пазарджик</option>
+                            <option value="523">Районен съд - Панагюрище</option>
+                            <option value="172">Районен съд - Перник</option>
+                            <option value="123">Районен съд - Петрич</option>
+                            <option value="524">Районен съд - Пещера</option>
+                            <option value="186">Районен съд - Пирдоп</option>
+                            <option value="443">Районен съд - Плевен</option>
+                            <option value="533">Районен съд - Пловдив</option>
+                            <option value="216">Районен съд - Поморие</option>
+                            <option value="352">Районен съд - Попово</option>
+                            <option value="313">Районен съд - Провадия</option>
+                            <option value="534">Районен съд - Първомай</option>
+                            <option value="552">Районен съд - Раднево</option>
+                            <option value="173">Районен съд - Радомир</option>
+                            <option value="333">Районен съд - Разград</option>
+                            <option value="124">Районен съд - Разлог</option>
+                            <option value="452">Районен съд - Русе</option>
+                            <option value="187">Районен съд - Самоков</option>
+                            <option value="125">Районен съд - Сандански</option>
+                            <option value="562">Районен съд - Свиленград</option>
+                            <option value="415">Районен съд - Свищов</option>
+                            <option value="188">Районен съд - Своге</option>
+                            <option value="423">Районен съд - Севлиево</option>
+                            <option value="342">Районен съд - Силистра</option>
+                            <option value="223">Районен съд - Сливен</option>
+                            <option value="189">Районен съд - Сливница</option>
+                            <option value="544">Районен съд - Смолян</option>
+                            <option value="217">Районен съд - Средец</option>
+                            <option value="553">Районен съд - Ст.Загора</option>
+                            <option value="325">Районен съд - Тервел</option>
+                            <option value="433">Районен съд - Тетевен</option>
+                            <option value="232">Районен съд - Тополовград</option>
+                            <option value="434">Районен съд - Троян</option>
+                            <option value="174">Районен съд - Трън</option>
+                            <option value="424">Районен съд - Трявна</option>
+                            <option value="343">Районен съд - Тутракан</option>
+                            <option value="353">Районен съд - Търговище</option>
+                            <option value="563">Районен съд - Харманли</option>
+                            <option value="564">Районен съд - Хасково</option>
+                            <option value="218">Районен съд - Царево</option>
+                            <option value="545">Районен съд - Чепеларе</option>
+                            <option value="444">Районен съд - Червен бряг</option>
+                            <option value="554">Районен съд - Чирпан</option>
+                            <option value="363">Районен съд - Шумен</option>
+                            <option value="233">Районен съд - Ямбол</option>
+                            <option value="110">Софийски градски съд</option>
+                            <option value="180">Софийски окръжен съд</option>
+                            <option value="111">Софийски районен съд</option>
+                            <option value="105">Специализиран наказателен съд</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="rw">
+                <div class="lbl">Вид дело:</div>
+                <div class="vl">
+                    <div class="col-sm-10 no-padding" style="width: 87.5%;">
+                        <select class="select2" id="CaseKindId" name="CaseKindId">
+                            <option value="">Всички</option>
+                            <option value="1">Административно дело</option>
+                            <option value="21">Брачно дело</option>
+                            <option value="29">ВНАХД</option>
+                            <option value="7">ВНОХД</option>
+                            <option value="14">ВНЧХД</option>
+                            <option value="13">ВЧНД</option>
+                            <option value="17">Въззивно гражданско дело</option>
+                            <option value="15">Въззивно търговско дело</option>
+                            <option value="25">Въззивно частно гражданско дело </option>
+                            <option value="9">Въззивно частно търговско дело</option>
+                            <option value="4">Гражданско дело</option>
+                            <option value="12">Гражданско дело по несъстоятелност</option>
+                            <option value="28">Гражданско дело по несъстоятелност (В)</option>
+                            <option value="26">Касационно административно дело</option>
+                            <option value="20">Касационно гражданско дело</option>
+                            <option value="31">Касационно наказателно дело</option>
+                            <option value="22">Касационно търговско дело</option>
+                            <option value="34">Касационно частно административно дело</option>
+                            <option value="6">Касационно частно гражданско дело</option>
+                            <option value="35">Касационно частно наказателно дело</option>
+                            <option value="8">Касационно частно търговско дело</option>
+                            <option value="18">КНАХД</option>
+                            <option value="33">КЧАНД</option>
+                            <option value="2">НАХД</option>
+                            <option value="10">НОХД</option>
+                            <option value="27">НЧХД</option>
+                            <option value="5">Търговско дело</option>
+                            <option value="11">Търговско дело по несъстоятелност</option>
+                            <option value="23">Търговско дело по несъстоятелност (В)</option>
+                            <option value="30">Фирмено дело</option>
+                            <option value="32">ЧАНД</option>
+                            <option value="19">Частно административно дело</option>
+                            <option value="16">Частно гражданско дело</option>
+                            <option value="24">Частно търговско дело</option>
+                            <option value="3">ЧНД</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="rw">
+                <div class="lbl">Входящ №:</div>
+                <div class="vl">
+                    <div class="col-sm-6 col-xs-10 no-padding">
+                        <input data-val="true" data-val-maxlength="Входящ номер може да съдържа най-много 9 цифри." data-val-maxlength-max="9" data-val-regex="Входящ номер може да съдържа само цифри." data-val-regex-pattern="^\d{0,20}$" id="IncomingNumber" name="IncomingNumber" type="text" value="" />
+                    </div>
+                    <div class="separator"> <img data-content="Входящият номер на иницииращия производството документ" data-placement="right" src="~/img/icons/info.png" class="info-icon" data-toggle="popover" data-trigger="hover" /></div>
+                </div>
+            </div>
+            <div class="rw">
+                <div class="lbl">Дело № / Година:</div>
+                <div class="vl">
+                    <div class="col-sm-6 col-xs-7 no-padding">
+                        <input data-val="true" data-val-maxlength="Дело номер може да съдържа най-много 9 цифри." data-val-maxlength-max="9" data-val-regex="Дело номер може да съдържа само цифри." data-val-regex-pattern="^\d{0,20}$" id="Number" name="Number" type="text" value="" />
+                    </div>
+                    <div class="separator"> / </div>
+                    <div class="col-sm-4 col-xs-5 no-padding">
+                        <select class="select2" data-val="true" data-val-maxlength="Дело година може да съдържа най-много 9 цифри." data-val-maxlength-max="9" data-val-regex="Дело година може да съдържа само цифри." data-val-regex-pattern="^\d{0,20}$" id="Year" name="Year">
+                            <option value="">Всички</option>
+                            <option value="2019">2019</option>
+                            <option value="2018">2018</option>
+                            <option value="2017">2017</option>
+                            <option value="2016">2016</option>
+                            <option value="2015">2015</option>
+                            <option value="2014">2014</option>
+                            <option value="2013">2013</option>
+                            <option value="2012">2012</option>
+                            <option value="2011">2011</option>
+                            <option value="2010">2010</option>
+                            <option value="2009">2009</option>
+                            <option value="2008">2008</option>
+                            <option value="2007">2007</option>
+                            <option value="2006">2006</option>
+                            <option value="2005">2005</option>
+                            <option value="2004">2004</option>
+                            <option value="2003">2003</option>
+                            <option value="2002">2002</option>
+                            <option value="2001">2001</option>
+                            <option value="2000">2000</option>
+                            <option value="1999">1999</option>
+                            <option value="1998">1998</option>
+                            <option value="1997">1997</option>
+                            <option value="1996">1996</option>
+                            <option value="1995">1995</option>
+                            <option value="1994">1994</option>
+                            <option value="1993">1993</option>
+                            <option value="1992">1992</option>
+                            <option value="1991">1991</option>
+                            <option value="1990">1990</option>
+                            <option value="1989">1989</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rw">
+                <div class="lbl">Свързани дела № / Година:</div>
+                <div class="vl">
+                    <div class="col-sm-6 col-xs-7 no-padding">
+                        <input data-val="true" data-val-maxlength="Предходно дело номер може да съдържа най-много 9 цифри." data-val-maxlength-max="9" data-val-regex="Предходно дело номер може да съдържа само цифри." data-val-regex-pattern="^\d{0,20}$" id="PredecessorNumber" name="PredecessorNumber" type="text" value="" />
+                    </div>
+                    <div class="separator"> / </div>
+                    <div class="col-sm-4 col-xs-5 no-padding">
+                        <select class="select2" data-val="true" data-val-maxlength="Преходно дело година може да съдържа най-много 9 цифри." data-val-maxlength-max="9" data-val-regex="Преходно дело година може да съдържа само цифри." data-val-regex-pattern="^\d{0,20}$" id="PredecessorYear" name="PredecessorYear">
+                            <option value="">Всички</option>
+                            <option value="2019">2019</option>
+                            <option value="2018">2018</option>
+                            <option value="2017">2017</option>
+                            <option value="2016">2016</option>
+                            <option value="2015">2015</option>
+                            <option value="2014">2014</option>
+                            <option value="2013">2013</option>
+                            <option value="2012">2012</option>
+                            <option value="2011">2011</option>
+                            <option value="2010">2010</option>
+                            <option value="2009">2009</option>
+                            <option value="2008">2008</option>
+                            <option value="2007">2007</option>
+                            <option value="2006">2006</option>
+                            <option value="2005">2005</option>
+                            <option value="2004">2004</option>
+                            <option value="2003">2003</option>
+                            <option value="2002">2002</option>
+                            <option value="2001">2001</option>
+                            <option value="2000">2000</option>
+                            <option value="1999">1999</option>
+                            <option value="1998">1998</option>
+                            <option value="1997">1997</option>
+                            <option value="1996">1996</option>
+                            <option value="1995">1995</option>
+                            <option value="1994">1994</option>
+                            <option value="1993">1993</option>
+                            <option value="1992">1992</option>
+                            <option value="1991">1991</option>
+                            <option value="1990">1990</option>
+                            <option value="1989">1989</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rw">
+                <div class="lbl">Вид акт:</div>
+                <div class="vl">
+                    <div class="col-sm-10 no-padding" style="width: 87.5%;">
+                        <select class="select2" id="ActKindId" name="ActKindId">
+                            <option value="">Всички</option>
+                            <option value="7">Заповед</option>
+                            <option value="2">Определение</option>
+                            <option value="3">Присъда</option>
+                            <option value="6">Протокол</option>
+                            <option value="5">Разпореждане</option>
+                            <option value="1">Решение</option>
+                            <option value="4">Споразумение</option>
+                            <option value="8">Становище</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rw">
+                <div class="lbl">Акт №: / Година:</div>
+                <div class="vl">
+                    <div class="col-sm-6 col-xs-7 no-padding">
+                        <input id="ActNumber" name="ActNumber" type="text" value="" />
+                    </div>
+                    <div class="separator"> / </div>
+                    <div class="col-sm-4 col-xs-5 no-padding">
+                        <select class="select2" id="ActYear" name="ActYear">
+                            <option value="">Всички</option>
+                            <option value="2019">2019</option>
+                            <option value="2018">2018</option>
+                            <option value="2017">2017</option>
+                            <option value="2016">2016</option>
+                            <option value="2015">2015</option>
+                            <option value="2014">2014</option>
+                            <option value="2013">2013</option>
+                            <option value="2012">2012</option>
+                            <option value="2011">2011</option>
+                            <option value="2010">2010</option>
+                            <option value="2009">2009</option>
+                            <option value="2008">2008</option>
+                            <option value="2007">2007</option>
+                            <option value="2006">2006</option>
+                            <option value="2005">2005</option>
+                            <option value="2004">2004</option>
+                            <option value="2003">2003</option>
+                            <option value="2002">2002</option>
+                            <option value="2001">2001</option>
+                            <option value="2000">2000</option>
+                            <option value="1999">1999</option>
+                            <option value="1998">1998</option>
+                            <option value="1997">1997</option>
+                            <option value="1996">1996</option>
+                            <option value="1995">1995</option>
+                            <option value="1994">1994</option>
+                            <option value="1993">1993</option>
+                            <option value="1992">1992</option>
+                            <option value="1991">1991</option>
+                            <option value="1990">1990</option>
+                            <option value="1989">1989</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rw">
+                <div class="lbl">Код за сигурност:</div>
+                <div class="vl">
+                    <input type="hidden" name="captcha-guid" value="44e5649f49224ae58a8fbbb67ccb8494" />
+                    <img src="~/img/captcha.gif" alt="CAPTCHA" width="150" height="31" />
+                </div>
+            </div>
+            <div class="rw">
+                <div class="lbl"> </div>
+                <div class="vl">
+                    <div class="col-xs-6 no-padding">
+                        <input autocomplete="off" id="Captcha" maxlength="5" name="Captcha" type="text" value="" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="rw">
+                <div class="lbl"></div>
+                <div class="vl">
+                    <input type="submit" class="search-submit" value="ТЪРСИ" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

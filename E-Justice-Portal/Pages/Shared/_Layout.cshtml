@@ -6,8 +6,7 @@
     <title>@ViewData["Title"]Единен портал за електронно правосъдие</title>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
-    <link rel="stylesheet" href="~/css/style2.css" />
+    <link rel="stylesheet" href="~/css/style.css" />
 </head>
 <body>
     <div class="loader"><div><img src="~/img/loader.gif" alt="" /><br />Моля, изчакайте</div></div>
@@ -27,12 +26,12 @@
             </div>
 
             <div class="user" style="min-width: 150px; margin-bottom: 10px;">
-                <a class="" href="~/Content/Login.html">Вход</a>
+                <a asp-page="/Login">Вход</a>
             </div>
 
             @*<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
                     <div class="container">
-                        <a class="navbar-brand" asp-area="" asp-page="/Index">E-Justice Portal</a>
+                        <a class="navbar-brand" asp-page="/Index">E-Justice Portal</a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                                 aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
@@ -41,10 +40,10 @@
                             <partial name="_LoginPartial" />
                             <ul class="navbar-nav flex-grow-1">
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                                    <a class="nav-link text-dark" asp-page="/Index">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                                    <a class="nav-link text-dark" asp-page="/Privacy">Privacy</a>
                                 </li>
                             </ul>
                         </div>
@@ -52,23 +51,17 @@
                 </nav>*@
         </header>
         <nav class="main-menu clearfix">
-            @*<a href="~/" class=" active" title="Начало">Начало</a>*@
-            <a class="active" title="Начало" asp-area="" asp-page="/Index">Начало</a>
-            <a href="~/Content/Search.html" class="" title="Съдебни дела">Съдебни дела</a>
-            <a href="~/Content/CourtsList.html" class="" title="Списък съдилища">Списък съдилища</a>
-            <a href="~/Content/ElectronicCasesAccessRules.html" class="" title="Правила за достъп">Правила за достъп</a>
-            <a title="Галерия" asp-area="" asp-page="/Gallery">Галерия</a>
+            <a class="active" title="Начало" asp-page="/Index">Начало</a>
+            <a class="" title="Съдебни дела" asp-page="/Search">Съдебни дела</a>
+            <a class="" title="Списък съдилища" asp-page="/Courts">Списък съдилища</a>
+            <a class="" title="Правила за достъп" asp-page="/Rules">Правила за достъп</a>
+            <a class="" title="Обратна връзка" asp-page="/Feedback">Обратна връзка</a>
+            <a class="" title="Галерия" asp-page="/Gallery">Галерия</a>
         </nav>
 
         <main role="main">
             @RenderBody()
         </main>
-
-        @*<div class="container">
-                <main role="main" class="pb-3">
-                    @RenderBody()
-                </main>
-            </div>*@
 
         <div class="information-links clearfix" style="margin-top:20px;">
             <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
@@ -95,11 +88,10 @@
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                 <a style="text-decoration:none;"><strong>Обща информация</strong></a>
-                <a href="~/Content/AccessibilityPolicy.html">Политика за достъпност</a>
-                <a href="~/Content/AboutTheSystem.html">За системата</a>
-                @*<a href="~/Content/Help.cshtml">Помощ</a>*@
-                <a class="nav-link" asp-area="" asp-page="/Help">Помощ</a>
-                @*<a asp-area="" asp-page="/Help">Начало</a>*@
+                <a class="nav-link" asp-page="/Accessibility">Политика за достъпност</a>
+                <a class="nav-link" asp-page="/Feedback">Обратна връзка</a>
+                <a class="nav-link" asp-page="/About">За системата</a>
+                <a class="nav-link" asp-page="/Help">Помощ</a>
             </div>
             <span class="gototop">
                 <img src="~/img/icons/chevron-up.png" alt="Горе">
@@ -116,9 +108,8 @@
         <div class="clear"></div>
         <script src="~/lib/jquery/dist/jquery.min.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-        @*<script src="~/js/custom.js"></script>
-            <script src="~/js/custom2.js"></script>*@
-        <script src="~/js/site.js" asp-append-version="true"></script>
+        <script src="~/js/custom.js"></script>
+        <script src="~/js/custom2.js"></script>
 
         @RenderSection("Scripts", required: false)
     </div>

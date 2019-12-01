@@ -25,8 +25,8 @@
             Повече информация за включените в момента съдилища, правилата за създаване на потребителски профил, правилата за достъп до електронно копие на съдебно дело и образци на заявления може да намерите в следните раздели на системата:
         </p>
         <p style="padding-left: 30px">
-            <a href="CourtsList.html">Списък на свързаните с портала съдилища</a><br />
-            <a href="ElectronicCasesAccessRules.html">Правила за достъп и образци на заявления</a>
+            <a asp-page="/Courts">Списък на свързаните с портала съдилища</a><br />
+            <a asp-page="/Rules">Правила за достъп и образци на заявления</a><br />
         </p>
 
         <h2 id="case-data">Данни, съдържащи се в системата</h2>
@@ -67,11 +67,11 @@
         </p>
 
         <ul class="browsers">
-            <li><a target="_blank" title="Internet Explorer" href="http://windows.microsoft.com/bg-bg/internet-explorer/ie-9-worldwide-languages"><img src="../Content/img/icons/browsers/ie.png" alt="">Microsoft Internet Explorer 9 или по-нов;</a></li>
-            <li><a target="_blank" title="Mozilla Firefox" href="http://www.mozilla.org/bg/firefox/new/"><img src="../Content/img/icons/browsers/mozilla.png" alt="">Mozilla Firefox 15 или по-нов;</a></li>
-            <li><a target="_blank" title="Google Chrome" href="https://www.google.com/intl/bg/chrome/browser/"><img src="../Content/img/icons/browsers/chrome.png" alt="">Google Chrome 25 или по-нов;</a></li>
-            <li><a target="_blank" title="Safari" href="https://www.apple.com/safari/"><img src="../Content/img/icons/browsers/safari.png" alt="">Safari 7 или по-нов;</a></li>
-            <li><a target="_blank" title="Opera" href="http://www.opera.com/bg/computer/windows"><img src="../Content/img/icons/browsers/opera.png" alt="">Opera 15 или по-нов;</a></li>
+            <li><a target="_blank" title="Internet Explorer" href="http://windows.microsoft.com/bg-bg/internet-explorer/ie-9-worldwide-languages"><img src="~/img/icons/browsers/ie.png" alt="">Microsoft Internet Explorer 9 или по-нов;</a></li>
+            <li><a target="_blank" title="Mozilla Firefox" href="http://www.mozilla.org/bg/firefox/new/"><img src="~/img/icons/browsers/mozilla.png" alt="">Mozilla Firefox 15 или по-нов;</a></li>
+            <li><a target="_blank" title="Google Chrome" href="https://www.google.com/intl/bg/chrome/browser/"><img src="~/img/icons/browsers/chrome.png" alt="">Google Chrome 25 или по-нов;</a></li>
+            <li><a target="_blank" title="Safari" href="https://www.apple.com/safari/"><img src="~/img/icons/browsers/safari.png" alt="">Safari 7 или по-нов;</a></li>
+            <li><a target="_blank" title="Opera" href="http://www.opera.com/bg/computer/windows"><img src="~/img/icons/browsers/opera.png" alt="">Opera 15 или по-нов;</a></li>
         </ul>
 
         <p>
@@ -80,17 +80,17 @@
         <p>
             Препоръката ни е винаги да се стремите да използвате съвременни и по-мощни компютри, както и винаги да работите с последна актуална версия на използвания от Вас браузър.
         </p>
-        <!-- Toggable sections: -->
+
         <p>&nbsp;</p>
         <h2>ВЪПРОСИ И ОТГОВОРИ</h2>
         <div class="help-questions">
             <h3 data-section="1" class="section-heading">
-                <img class="arrow" src="../Content/img/icons/arrow-right-circle-orange.png" alt="">
+                <img class="arrow" src="~/img/icons/arrow-right-circle-orange.png" alt="">
                 Потребителски профил
             </h3>
             <section data-section="1" class="togglable-section clearfix">
                 <h4 data-section="1-1" class="section-heading">
-                    <img class="arrow" src="../Content/img/icons/arrow-right-circle-orange.png" alt="">
+                    <img class="arrow" src="~/img/icons/arrow-right-circle-orange.png" alt="">
                     Как да си създам потребителски профил?
                 </h4>
                 <section data-section="1-1" class="togglable-section clearfix">
@@ -110,12 +110,12 @@
                         За допълнителна информация вижте:
                     </p>
                     <ul>
-                        <li><a href="CourtsList.html">Списък на свързаните с портала съдилища</a></li>
-                        <li><a href="ElectronicCasesAccessRules.html">Правила за достъп и образци на заявления</a></li>
+                        <li><a asp-page="/Courts">Списък на свързаните с портала съдилища</a></li>
+                        <li><a asp-page="/Rules">Правила за достъп и образци на заявления</a></li>
                     </ul>
                 </section>
                 <h4 data-section="1-2" class="section-heading">
-                    <img class="arrow" src="../Content/img/icons/arrow-right-circle-orange.png" alt="">
+                    <img class="arrow" src="~/img/icons/arrow-right-circle-orange.png" alt="">
                     Как да си сменя потребителското име на профила?
                 </h4>
                 <section data-section="1-2" class="togglable-section clearfix">
@@ -129,12 +129,12 @@
                         За допълнителна информация вижте:
                     </p>
                     <ul>
-                        <li><a href="CourtsList.html">Списък на свързаните с портала съдилища</a></li>
-                        <li><a href="ElectronicCasesAccessRules.html">Правила за достъп и образци на заявления</a></li>
+                        <li><a asp-page="/Courts">Списък на свързаните с портала съдилища</a></li>
+                        <li><a asp-page="/Rules">Правила за достъп и образци на заявления</a></li>
                     </ul>
                 </section>
                 <h4 data-section="1-3" class="section-heading">
-                    <img class="arrow" src="../Content/img/icons/arrow-right-circle-orange.png" alt="">
+                    <img class="arrow" src="~/img/icons/arrow-right-circle-orange.png" alt="">
                     Как да си възстановя забравената парола?
                 </h4>
                 <section data-section="1-3" class="togglable-section clearfix">
@@ -147,7 +147,7 @@
                     </p>
                 </section>
                 <h4 data-section="1-4" class="section-heading">
-                    <img class="arrow" src="../Content/img/icons/arrow-right-circle-orange.png" alt="">
+                    <img class="arrow" src="~/img/icons/arrow-right-circle-orange.png" alt="">
                     Може ли няколко потребители да използваме един и същ профил?
                 </h4>
                 <section data-section="1-4" class="togglable-section clearfix">
@@ -164,8 +164,8 @@
                         За допълнителна информация вижте:
                     </p>
                     <ul>
-                        <li><a href="CourtsList.html">Списък на свързаните с портала съдилища</a></li>
-                        <li><a href="ElectronicCasesAccessRules.html">Правила за достъп и образци на заявления</a></li>
+                        <li><a asp-page="/Courts">Списък на свързаните с портала съдилища</a></li>
+                        <li><a asp-page="/Rules">Правила за достъп и образци на заявления</a></li>
                     </ul>
                     <p>
                         <strong>За физически лица и самостоятелни процесуални представители</strong>
@@ -189,12 +189,12 @@
                 </section>
             </section>
             <h3 data-section="2" class="section-heading">
-                <img class="arrow" src="../Content/img/icons/arrow-right-circle-orange.png" alt="">
+                <img class="arrow" src="~/img/icons/arrow-right-circle-orange.png" alt="">
                 Данни съдържащи се в системата и достъп до тях
             </h3>
             <section data-section="2" class="togglable-section clearfix">
                 <h4 data-section="2-1" class="section-heading">
-                    <img class="arrow" src="../Content/img/icons/arrow-right-circle-orange.png" alt="">
+                    <img class="arrow" src="~/img/icons/arrow-right-circle-orange.png" alt="">
                     Какви данни се съдържат в системата?
                 </h4>
                 <section data-section="2-1" class="togglable-section clearfix">
@@ -224,7 +224,7 @@
                 </section>
 
                 <h4 data-section="2-2" class="section-heading">
-                    <img class="arrow" src="../Content/img/icons/arrow-right-circle-orange.png" alt="">
+                    <img class="arrow" src="~/img/icons/arrow-right-circle-orange.png" alt="">
                     Какво да направя, искам да ми бъде осигурен достъп до дело?
                 </h4>
                 <section data-section="2-2" class="togglable-section clearfix">
@@ -236,13 +236,13 @@
                     </p>
                     <p>
                         За допълнителна информация вижте:<br />
-                        <a href="CourtsList.html">Списък на свързаните с портала съдилища</a> <br />
-                        <a href="ElectronicCasesAccessRules.html">Правила за достъп и образци на заявления</a>
+                        <a asp-page="/Courts">Списък на свързаните с портала съдилища</a> <br />
+                        <a asp-page="/Rules">Правила за достъп и образци на заявления</a>
                     </p>
                 </section>
 
                 <h4 data-section="2-3" class="section-heading">
-                    <img class="arrow" src="../Content/img/icons/arrow-right-circle-orange.png" alt="">
+                    <img class="arrow" src="~/img/icons/arrow-right-circle-orange.png" alt="">
                     Какво да направя, искам да получавам по електронен път призовки и съобщения?
                 </h4>
                 <section data-section="2-3" class="togglable-section clearfix">
@@ -260,13 +260,13 @@
                     </p>
                     <p>
                         За допълнителна информация вижте:<br />
-                        <a href="CourtsList.html">Списък на свързаните с портала съдилища</a> <br />
-                        <a href="ElectronicCasesAccessRules.html">Правила за достъп и образци на заявления</a>
+                        <a asp-page="/Courts">Списък на свързаните с портала съдилища</a> <br />
+                        <a asp-area="" asp-page="/Rules">Правила за достъп и образци на заявления</a>
                     </p>
                 </section>
 
                 <h4 data-section="2-4" class="section-heading">
-                    <img class="arrow" src="../Content/img/icons/arrow-right-circle-orange.png" alt="">
+                    <img class="arrow" src="~/img/icons/arrow-right-circle-orange.png" alt="">
                     Какво да направя, за да прекратя достъпа на други лица до мои дела?
                 </h4>
                 <section data-section="2-4" class="togglable-section clearfix">
@@ -274,17 +274,17 @@
                         Електронен достъп чрез системата на други лица, различни от страните по делото, се дава само и единствено след изрично писмено упълномощаване от страната. По някаква причина, например смяна на процесуален представител (адвокат), напускане на служител и др., може да се наложи да се спре или промени достъпа до електронно копие на дело. Системата поддържа техническа възможност за тези действия, а процедурата за спиране или промяна на достъп до електронно дело от конкретен профил е предвидена в Правилата за достъп. За извършване на промените е необходимо да подадете заявление по образец на място в компетентния по делото съд.
                     </p>
                     <p>
-                        За допълнителна информация вижте <a href="ElectronicCasesAccessRules.html">Правила за достъп и образци на заявления</a>
+                        За допълнителна информация вижте <a class="" title="" asp-area="" asp-page="/Rules">Правила за достъп и образци на заявления</a>
                     </p>
                 </section>
             </section>
             <h3 data-section="3" class="section-heading">
-                <img class="arrow" src="../Content/img/icons/arrow-right-circle-orange.png" alt="">
+                <img class="arrow" src="~/img/icons/arrow-right-circle-orange.png" alt="">
                 Технически въпроси
             </h3>
             <section data-section="3" class="togglable-section clearfix">
                 <h4 data-section="3-1" class="section-heading">
-                    <img class="arrow" src="../Content/img/icons/arrow-right-circle-orange.png" alt="">
+                    <img class="arrow" src="~/img/icons/arrow-right-circle-orange.png" alt="">
                     Защо някои функционалности в системата не работят?
                 </h4>
                 <section data-section="3-1" class="togglable-section clearfix">
@@ -293,7 +293,7 @@
                     </p>
                 </section>
                 <h4 data-section="3-2" class="section-heading">
-                    <img class="arrow" src="../Content/img/icons/arrow-right-circle-orange.png" alt="">
+                    <img class="arrow" src="~/img/icons/arrow-right-circle-orange.png" alt="">
                     Кой браузър да използвам, за да работя със системата?
                 </h4>
                 <section data-section="3-2" class="togglable-section clearfix">
@@ -301,11 +301,11 @@
                         Системата е разработена и тествана за работа със следните видове браузъри:
                     </p>
                     <ul class="browsers">
-                        <li><a target="_blank" title="Internet Explorer" href="http://windows.microsoft.com/bg-bg/internet-explorer/ie-9-worldwide-languages"><img src="../Content/img/icons/browsers/ie.png" alt="">Microsoft Internet Explorer 9 или по-нов;</a></li>
-                        <li><a target="_blank" title="Mozilla Firefox" href="http://www.mozilla.org/bg/firefox/new/"><img src="../Content/img/icons/browsers/mozilla.png" alt="">Mozilla Firefox 15 или по-нов;</a></li>
-                        <li><a target="_blank" title="Google Chrome" href="https://www.google.com/intl/bg/chrome/browser/"><img src="../Content/img/icons/browsers/chrome.png" alt="">Google Chrome 25 или по-нов;</a></li>
-                        <li><a target="_blank" title="Safari" href="https://www.apple.com/safari/"><img src="../Content/img/icons/browsers/safari.png" alt="">Safari 7 или по-нов;</a></li>
-                        <li><a target="_blank" title="Opera" href="http://www.opera.com/bg/computer/windows"><img src="../Content/img/icons/browsers/opera.png" alt="">Opera 15 или по-нов;</a></li>
+                        <li><a target="_blank" title="Internet Explorer" href="http://windows.microsoft.com/bg-bg/internet-explorer/ie-9-worldwide-languages"><img src="~/img/icons/browsers/ie.png" alt="">Microsoft Internet Explorer 9 или по-нов;</a></li>
+                        <li><a target="_blank" title="Mozilla Firefox" href="http://www.mozilla.org/bg/firefox/new/"><img src="~/img/icons/browsers/mozilla.png" alt="">Mozilla Firefox 15 или по-нов;</a></li>
+                        <li><a target="_blank" title="Google Chrome" href="https://www.google.com/intl/bg/chrome/browser/"><img src="~/img/icons/browsers/chrome.png" alt="">Google Chrome 25 или по-нов;</a></li>
+                        <li><a target="_blank" title="Safari" href="https://www.apple.com/safari/"><img src="~/img/icons/browsers/safari.png" alt="">Safari 7 или по-нов;</a></li>
+                        <li><a target="_blank" title="Opera" href="http://www.opera.com/bg/computer/windows"><img src="~/img/icons/browsers/opera.png" alt="">Opera 15 или по-нов;</a></li>
                     </ul>
                     <p>
                         В момента по наши наблюдения от проведените тестове, системата работи най-добре и бързо с браузъра  <a target="_blank" title="Google Chrome" href="https://www.google.com/intl/bg/chrome/browser/">Google Chrome</a>.
