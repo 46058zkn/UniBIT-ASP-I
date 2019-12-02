@@ -1,0 +1,69 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "";
+}
+
+<div class="breadcrumbs"><a class="active" title="Начало" asp-page="/Index">Начало</a><span>&nbsp;&gt;&nbsp;</span>Вход</div>
+
+<div class="login">
+    <div class="locker text-align-center">
+        <img src="~/img/icons/login-locker.png" alt="" />
+        <span class="title">Вход в системата</span>
+    </div>
+    <div class="login-form">
+        <span class="title">Вход в системата</span>
+        <section>
+            <form class="search-form" id="account" method="post">
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="rw">
+                    <div class="lbl">Потребителско име:</div>
+                    <div class="vl">
+                        <input asp-for="Input.Email" class="form-control" />
+                        <span asp-validation-for="Input.Email" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="rw">
+                    <div class="lbl">Парола:</div>
+                    <div class="vl">
+                        <input asp-for="Input.Password" class="form-control" />
+                        <span asp-validation-for="Input.Password" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="rw">
+                    <div class="lbl">Код за сигурност:</div>
+                    <div class="vl">
+                        <input type="hidden" name="captcha-guid" value="4d74b14bec5b497ab863b69aeb369ac0" />
+                        <img src="~/img/captcha3.gif" alt="CAPTCHA" width="150" height="31" />
+                    </div>
+                </div>
+                <div class="rw">
+                    <div class="lbl"> </div>
+                    <div class="vl">
+                        <div class="col-xs-6 no-padding">
+                            <input autocomplete="off" id="Captcha" maxlength="5" name="Captcha" type="text" value="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="rw">
+                    <div class="lbl"></div>
+                    <div class="vl">
+                        <input type="submit" class="search-submit" value="ВХОД">
+                    </div>
+                </div>
+                <div class="rw">
+                    <div class="lbl"></div>
+                    <div class="vl">
+                        <a class="nav-link" id="forgot-password" asp-page="./ForgotPassword">Забравена парола</a>
+                        <a class="nav-link" asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Регистрация</a>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,13 +1,3 @@
-$(document).ready(function () {
-    var url = window.location;
-    $(".main-menu").find(".active").removeClass("active");
-    $(".main-menu a").each(function () {
-        if (this.href === url) {
-            $(this).parent().addClass("active");
-        }
-    });
-});
-
 function createAutoComplete(n, t, i, r, u, f) {
     var s = $("#" + t),
         h = $("#" + r),

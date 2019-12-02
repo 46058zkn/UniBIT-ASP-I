@@ -15,54 +15,28 @@
             <a class="logo" href="https://ecase.justice.bg/" title="">
                 <img src="~/img/gerb.jpg" alt="" />
             </a>
-
             <button type="button" role="button" class="lines-button x menu hidden-lg">
                 <span class="lines"></span>
             </button><label>Меню</label>
-
             <div class="title">
                 <strong>Единен портал за електронно правосъдие</strong>
                 <span>Република България</span>
             </div>
-
             <div class="user" style="min-width: 150px; margin-bottom: 10px;">
-                <a asp-page="/Login">Вход</a>
+                <a asp-area="Identity" asp-page="/Account/Login">Вход</a>
             </div>
-
-            @*<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-                    <div class="container">
-                        <a class="navbar-brand" asp-page="/Index">E-Justice Portal</a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                                aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                            <partial name="_LoginPartial" />
-                            <ul class="navbar-nav flex-grow-1">
-                                <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-page="/Index">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-page="/Privacy">Privacy</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>*@
         </header>
         <nav class="main-menu clearfix">
-            <a class="active" title="Начало" asp-page="/Index">Начало</a>
+            <a class="" title="Начало" asp-page="/Index">Начало</a>
             <a class="" title="Съдебни дела" asp-page="/Search">Съдебни дела</a>
             <a class="" title="Списък съдилища" asp-page="/Courts">Списък съдилища</a>
             <a class="" title="Правила за достъп" asp-page="/Rules">Правила за достъп</a>
             <a class="" title="Обратна връзка" asp-page="/Feedback">Обратна връзка</a>
             <a class="" title="Галерия" asp-page="/Gallery">Галерия</a>
         </nav>
-
         <main role="main">
             @RenderBody()
         </main>
-
         <div class="information-links clearfix" style="margin-top:20px;">
             <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                 <a style="text-decoration:none;"><strong>Българско правосъдие</strong></a>
@@ -98,7 +72,6 @@
                 Горе
             </span>
         </div>
-
         <footer class="clearfix text-align-center">
             <div class="col-xs-12">
                 <p style="margin:20px 20% 20px 20%">Порталът е разработен по проект: „Електронно правосъдие - проучване и изграждане на единна комуникационна и информационна инфраструктура и единен електронен портал на съдебната власт“, финансиран по Оперативна програма "Административен капацитет", съфинансирана от Европейския съюз чрез Европейския социален фонд. Договорът е сключен в изпълнение на обществена поръчка с предмет: „Разработване и внедряване на единен портал на електронното правосъдие, и обучение за работа с единния портал“.</p>
@@ -110,7 +83,6 @@
         <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
         <script src="~/js/custom.js"></script>
         <script src="~/js/custom2.js"></script>
-
         @RenderSection("Scripts", required: false)
     </div>
 </body>
