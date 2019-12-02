@@ -23,13 +23,14 @@
                 <span>Република България</span>
             </div>
             <div class="user" style="min-width: 150px; margin-bottom: 10px;">
-                @if (User.Identity.Name == "")
+                @if (!User.Identity.IsAuthenticated)
                 {
                     <a asp-area="Identity" asp-page="/Account/Login">Вход</a>
                 }
                 else
                 {
                     <a asp-area="Identity" asp-page="/Account/Logout">Изход</a>
+                    @*<a asp-area="Identity" asp-page="/Account/Manage/Index">@User.Identity.Name</a>*@
                 }
             </div>
         </header>

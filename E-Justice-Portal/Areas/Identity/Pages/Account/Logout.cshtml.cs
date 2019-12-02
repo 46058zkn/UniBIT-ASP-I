@@ -20,7 +20,7 @@ namespace E_Justice_Portal.Areas.Identity.Pages.Account
             _signInManager = signInManager;
             _logger = logger;
 
-            OnPost();
+            OnPost().ConfigureAwait(false);
         }
 
         public void OnGet()
@@ -41,10 +41,8 @@ namespace E_Justice_Portal.Areas.Identity.Pages.Account
             {
                 return LocalRedirect(returnUrl);
             }
-            else
-            {
-                return RedirectToPage();
-            }
+
+            return RedirectToPage();
         }
     }
 }
