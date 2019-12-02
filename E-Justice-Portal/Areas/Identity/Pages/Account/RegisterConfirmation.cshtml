@@ -1,12 +1,14 @@
 ﻿@page
 @model RegisterConfirmationModel
 @{
-    ViewData["Title"] = "";
+    ViewData["Title"] = "Потвърждение на регистрация ";
 }
 
 <div class="breadcrumbs"><a class="active" title="Начало" asp-page="/Index">Начало</a><span>&nbsp;&gt;&nbsp;</span>Потвърждение на регистрацията</div>
 
 @{
+    <h1>@ViewData["Title"]</h1>
+
     if (@Model.DisplayConfirmAccountLink)
     {
         <p>
@@ -17,7 +19,6 @@
     else
     {
         <p>
-            Please check your email to confirm your account.
             Имате поща за потвърждаване на регистрацията.
         </p>
     }
