@@ -1,6 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.Diagnostics.Eventing.Reader;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -20,6 +19,8 @@ namespace E_Justice_Portal.Areas.Identity.Pages.Account
         {
             _signInManager = signInManager;
             _logger = logger;
+
+            OnPost();
         }
 
         public void OnGet()
@@ -29,6 +30,12 @@ namespace E_Justice_Portal.Areas.Identity.Pages.Account
         public async Task<IActionResult> OnPost(string returnUrl = null)
         {
             await _signInManager.SignOutAsync();
+
+            foreach (var item in Request.Cookies.Keys)
+            {
+                Response.Cookies.Delete(item);
+            }
+
             _logger.LogInformation("User logged out.");
             if (returnUrl != null)
             {

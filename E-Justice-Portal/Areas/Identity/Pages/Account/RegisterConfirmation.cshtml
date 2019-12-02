@@ -1,0 +1,24 @@
+﻿@page
+@model RegisterConfirmationModel
+@{
+    ViewData["Title"] = "";
+}
+
+<div class="breadcrumbs"><a class="active" title="Начало" asp-page="/Index">Начало</a><span>&nbsp;&gt;&nbsp;</span>Потвърждение на регистрацията</div>
+
+@{
+    if (@Model.DisplayConfirmAccountLink)
+    {
+        <p>
+            Изпращането на мейл за потвърждение на регистрацията не е имплементирано в тази версия на проекта.
+            <a id="confirm-link" href="@Model.EmailConfirmationUrl">Моля, кликнете тук, за да потвърдите регистрацията на акаунта си!</a>
+        </p>
+    }
+    else
+    {
+        <p>
+            Please check your email to confirm your account.
+            Имате поща за потвърждаване на регистрацията.
+        </p>
+    }
+}

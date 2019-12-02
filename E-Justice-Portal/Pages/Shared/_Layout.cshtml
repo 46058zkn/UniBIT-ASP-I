@@ -23,7 +23,14 @@
                 <span>Република България</span>
             </div>
             <div class="user" style="min-width: 150px; margin-bottom: 10px;">
-                <a asp-area="Identity" asp-page="/Account/Login">Вход</a>
+                @if (User.Identity.Name == "")
+                {
+                    <a asp-area="Identity" asp-page="/Account/Login">Вход</a>
+                }
+                else
+                {
+                    <a asp-area="Identity" asp-page="/Account/Logout">Изход</a>
+                }
             </div>
         </header>
         <nav class="main-menu clearfix">
