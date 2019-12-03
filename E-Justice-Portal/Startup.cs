@@ -24,9 +24,12 @@ namespace E_Justice_Portal
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
+
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+
             services.AddSingleton(Configuration);
+
             services.AddRazorPages().AddRazorRuntimeCompilation();
         }
 
@@ -36,6 +39,7 @@ namespace E_Justice_Portal
             using (var serviceScope = app.ApplicationServices.GetService<IServiceScopeFactory>().CreateScope())
             {
                 var context = serviceScope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+
                 context.Database.Migrate();
             }
 
