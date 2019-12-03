@@ -26,7 +26,7 @@ namespace E_Justice_Portal
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
-
+            services.AddSingleton(Configuration);
             services.AddRazorPages().AddRazorRuntimeCompilation();
         }
 
