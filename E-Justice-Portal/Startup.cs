@@ -20,9 +20,10 @@ namespace E_Justice_Portal
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(
-                    Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<ApplicationDbContext>(opts =>
+                opts.UseSqlServer(
+                    Configuration.GetConnectionString("DefaultConnection"),
+                    options => options.MigrationsAssembly("EFCoreApp")));
 
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
