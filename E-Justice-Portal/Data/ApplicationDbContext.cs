@@ -10,5 +10,7 @@ namespace E_Justice_Portal.Data
         {
             this.Database.Migrate();
         }
+
+        public DbSet<GalleryImage> GalleryImages { get; set; }
     }
 }

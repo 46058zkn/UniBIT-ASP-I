@@ -30,17 +30,23 @@
                 else
                 {
                     <a asp-area="Identity" asp-page="/Account/Logout">Изход</a>
-                    @*<a asp-area="Identity" asp-page="/Account/Manage/Index">@User.Identity.Name</a>*@
                 }
             </div>
         </header>
         <nav class="main-menu clearfix">
-            <a class="" title="Начало" asp-page="/Index">Начало</a>
-            <a class="" title="Съдебни дела" asp-page="/Search">Съдебни дела</a>
-            <a class="" title="Списък съдилища" asp-page="/Courts">Списък съдилища</a>
-            <a class="" title="Правила за достъп" asp-page="/Rules">Правила за достъп</a>
-            <a class="" title="Обратна връзка" asp-page="/Feedback">Обратна връзка</a>
-            <a class="" title="Галерия" asp-page="/Gallery">Галерия</a>
+            <a title="Начало" asp-page="/Index">Начало</a>
+            <a title="Съдебни дела" asp-page="/Search">Съдебни дела</a>
+            <a title="Списък съдилища" asp-page="/Courts">Списък съдилища</a>
+            <a title="Правила за достъп" asp-page="/Rules">Правила за достъп</a>
+            <a title="Обратна връзка" asp-page="/Feedback">Обратна връзка</a>
+            @if (!User.Identity.IsAuthenticated)
+            {
+                <a title="Галерия" asp-area="Identity" asp-page="/Account/Login">Галерия</a>
+            }
+            else
+            {
+                <a title="Галерия" asp-page="/ImageGallery">Галерия</a>
+            }
         </nav>
         <main role="main">
             @RenderBody()
